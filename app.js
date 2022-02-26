@@ -11,6 +11,7 @@ const contactContent = "Scelerisque eleifend donec pretium vulputate sapien. Rho
 
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 let posts = []
 
@@ -45,11 +46,6 @@ app.get('/posts/:post', (req, res) => {
 
 
 
-
-
-
-
-
-app.listen(3000, function () {
-  console.log("Server started on port 3000");
+app.listen(PORT, function () {
+  console.log(`Server started on port ${PORT}`);
 });
